@@ -1,0 +1,23 @@
+{
+  "name": "vim-sharing-presentation",
+  "version": "1.0.0",
+  "description": "Vim 技術分享簡報 - 使用 Marp 製作",
+  "scripts": {
+    "preview": "marp --preview vim-sharing.md",
+    "export:pdf": "marp vim-sharing.md --pdf --allow-local-files -o vim-sharing.pdf",
+    "export:html": "marp vim-sharing.md --html -o vim-sharing.html",
+    "export:pptx": "marp vim-sharing.md --pptx -o vim-sharing.pptx",
+    "watch": "marp -w vim-sharing.md"
+  },
+  "keywords": [
+    "vim",
+    "presentation",
+    "marp",
+    "slide"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.4.0"
+  }
+}
