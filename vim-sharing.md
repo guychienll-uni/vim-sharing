@@ -131,15 +131,15 @@ style: |
 ```
     Normal Mode
          |
-    i,o,a | ESC
+    `i`,`o`,`a`
          v
     Insert Mode
          |
-       ESC
+       `ESC`
          v
     Normal Mode
          |
-      :,/,?
+    `:`,`/`,`?`
          v
    Command Mode
 ```
@@ -204,12 +204,14 @@ style: |
 
 ## 組成：動作 + 範圍 + 名詞
 
-| 範圍 | 說明 | 名詞 | 說明 |
-|------|------|------|------|
-| `i` | inner (內部) | `w` | word (單字) |
-| `a` | around (包含) | `p` | paragraph (段落) |
-|  |  | `(` `)` `{` `}` | 括號 |
-|  |  | `'` `"` | 引號 |
+| 動作 | 說明 | 範圍 | 說明 | 名詞 | 說明 |
+|------|------|------|------|------|------|
+| `v` | visual (選擇) | `i` | inner (內部) | `w` | word (單字) |
+| `d` | delete (刪除) | `a` | around (包含) | `p` | paragraph (段落) |
+| `y` | yank (複製) |  |  | `i` | indentation (縮排) |
+| `c` | change (改變) |  |  | `t` | tag (標籤) |
+|  |  |  |  | `(` `)` `{` `}` | 括號 |
+|  |  |  |  | `'` `"` | 引號 |
 
 ---
 
@@ -281,12 +283,41 @@ const message = "Hello Vim";
 
 # VSCode 整合 - 快捷鍵
 
+## 導航配置 (Navigation)
+
 ```json
 {
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "r"],
-      "commands": ["editor.action.rename"]
+      "before": ["z", "n"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["z", "p"],
+      "commands": ["editor.action.marker.prev"]
+    }
+  ]
+}
+```
+
+---
+
+# VSCode 整合 - 快捷鍵
+
+## 重構配置 (Refactor - p42)
+
+```json
+{
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["R", "R"],
+      "commands": ["p42.touchBar.refactor"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["R", "R"],
+      "commands": ["p42.touchBar.refactor"]
     }
   ]
 }
@@ -338,7 +369,7 @@ map RV :action IntroduceVariable<CR>
 |------|------|------|------|
 | 刪除整行 (delete line) | `dd` | 增加縮排 (shift right) | `>>` |
 | 複製整行 (yank line) | `yy` | 減少縮排 (shift left) | `<<` |
-| 改變整行 (change line) | `cc` | 自動縮排 (auto-indent) | `=` |
+| 改變整行 (change line) | `cc` | | |
 | 重複動作 (repeat) | `.` |  |  |
 
 ---
@@ -388,11 +419,16 @@ set ruler
 
 # 學習資源
 
-| 學習步驟 | 練習網站 |
-|----------|----------|
-| 1. 執行 `vimtutor` | Vim Adventures |
-| 2. 每日學一個新指令 | |
-| 3. 整合至 IDE | |
+## 學習步驟
+
+1. 執行 `vimtutor`
+2. 每日學一個新指令
+3. 整合至 IDE
+
+## 練習網站
+
+- [Vim Adventures](https://vim-adventures.com/)
+- [Vim Golf](https://www.vimgolf.com/)
 
 ---
 

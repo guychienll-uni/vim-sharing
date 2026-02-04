@@ -6,9 +6,9 @@
 
 本簡報內容參考自以下網站：
 
-2. [Guy Chien - Vim Basics](https://www.guychienll.dev/notes/vim/vim-basics)
-3. [Guy Chien - VSCode 配置推薦](https://www.guychienll.dev/notes/vim/vscode)
-4. [Guy Chien - JetBrains 配置推薦](https://www.guychienll.dev/notes/vim/jetbrains)
+[Guy Chien - Vim Basics](https://www.guychienll.dev/notes/vim/vim-basics)
+[Guy Chien - VSCode 配置推薦](https://www.guychienll.dev/notes/vim/vscode)
+[Guy Chien - JetBrains 配置推薦](https://www.guychienll.dev/notes/vim/jetbrains)
 
 ## 快速開始
 
