@@ -445,6 +445,12 @@ A: 不需要，可以逐步過渡
 
 ---
 
+# Vim CheatSheet
+
+![width:800px](https://pbs.twimg.com/media/DOSNfezU8AIzrpF.jpg)
+
+---
+
 <!-- _class: lead -->
 
 # Thank You!
